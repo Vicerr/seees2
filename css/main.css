@@ -108,7 +108,7 @@ img {
 .fade-item {
   opacity: 0;
   transform: translateY(100%);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.5s, transform 0.5s;
   z-index: 1;
 }
 .fade-item.fade-and-slide-in {

@@ -149,7 +149,7 @@ $(document).ready(function (){
     const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.05
+        threshold: 0
     }
 
     //fade items in using observer
@@ -167,11 +167,24 @@ $(document).ready(function (){
         observer.observe(item)
     })
 
+
+
+
+
+
+
+
+
+    
+
     // cookies
+    
     function hasAcceptedCookies(){
         return document.cookie.includes("cookiesAccepted=true")
     }
-
+    function hasRejectedCookies(){
+        return document.cookie.includes("cookiesRejected=true")
+    }
     function setCookie(name, value, days){
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
@@ -184,13 +197,13 @@ $(document).ready(function (){
         const cookiesPopup = $('#cookiesPopup')
 
         //check if user has accepted cookies
-        if(!hasAcceptedCookies()){
+        if(!hasAcceptedCookies() && hasRejectedCookies()){
             // cookiesPopup.addClass("show")
-           setTimeout(function() {
-            $(cookiesPopup).fadeIn();
-           }
+            cookiesPopup.css("opacity", 0)
+                cookiesPopup.delay(5000).animate({"opacity":1}, 500);
             
-           , 2000);
+        }else{
+            cookiesPopup.hide()
         }
     }
 
@@ -212,10 +225,13 @@ $(document).ready(function (){
 
         if(accepted){
             setCookie("cookiesAccepted", "true", 30)
+        }else{
+            setCookie("cookiesRejected", "true", 5)
         }
         $(cookiesPopup).fadeOut();
     }
 
+    createCookiesPopup()
     $("#acceptCookiesButton").on("click", function(){
         hideCookiesPopup(true)
     })
@@ -223,7 +239,6 @@ $(document).ready(function (){
         hideCookiesPopup(false)
     })
     showCookiesPopup()
-    createCookiesPopup()
 
 })
 
