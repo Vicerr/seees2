@@ -197,7 +197,7 @@ $(document).ready(function (){
         const cookiesPopup = $('#cookiesPopup')
 
         //check if user has accepted cookies
-        if(!hasAcceptedCookies() && hasRejectedCookies()){
+        if(!hasAcceptedCookies()){
             // cookiesPopup.addClass("show")
             cookiesPopup.css("opacity", 0)
                 cookiesPopup.delay(5000).animate({"opacity":1}, 500);
