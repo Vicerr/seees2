@@ -1,0 +1,32 @@
+.cookies-popup{
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    width: 100%;
+    z-index: 300;
+    > .container{
+        padding: 1rem .5rem;   
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+
+    }
+  
+    button{
+        padding: .5rem 1rem;
+    }
+}
+
+
+@keyframes slide-up {
+    from{
+        transform: translateY(100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}

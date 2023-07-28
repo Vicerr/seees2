@@ -1,0 +1,24 @@
+#privacypolicy{
+     .header-text{
+    font-weight: 800;
+    padding: 1rem;
+    text-align: center;
+    > p{
+        margin: 1rem 0;
+    }}
+
+    .list-container{
+
+    }
+    .list{
+        display: block;
+        padding: .5rem 0;
+    }
+    .sublist-container{
+        margin-left: 2rem;
+    }
+    .sublist{
+        padding: .5rem 0;
+    }
+}
+

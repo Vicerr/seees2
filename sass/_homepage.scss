@@ -1,0 +1,304 @@
+header{
+    position: relative;
+    overflow: hidden;
+}
+.hero-section{
+    max-height: 700px;
+    height: 75vh;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image{
+    display: none;
+}
+
+.hero-text{
+    color: white;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    transform: translate(0, -15%);
+
+    *{
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+}
+
+    
+
+@media screen and (min-width:500px) {
+.hero-section{
+    height: 100vh;
+    position: relative;
+}
+.hero-text{
+  
+
+
+    *{
+        font-size: 2rem;
+    }
+}
+
+}
+
+.flexbox{
+    display: flex;
+    padding: 1rem 0;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    h1{
+        padding: .5rem 0;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    :nth-of-type(2){
+        .textbox{
+            order: 1;
+        }
+        .image-box{
+            order: 2;
+        }
+    }
+
+    >div{
+        display: flex;
+        flex-basis: 200px;
+        flex-grow: 1;
+    }
+
+}
+
+.flexbox.alternate{
+    .image-box{
+        justify-content: flex-end;
+    }
+}
+.textbox{
+    padding: 1rem 0;
+    justify-content: center;
+    order: 1;
+    flex-direction: column;
+}
+.image-box{
+    order: 2;
+    aspect-ratio: 4/3;
+    img{
+        width: 100%;
+    }
+}
+.else{
+    .boxescontainer{
+        gap: 2.5rem !important;
+        .box{
+            width: 100%;
+            aspect-ratio: unset;
+            height: 100px;
+            position: relative;
+            &::after{
+                content: '';
+                width: 60px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background-color: blue;
+    
+            }
+        }
+        
+    }
+}
+.projects, .else{
+    padding: 1rem 0;
+    h1{
+        text-transform: capitalize;
+    }
+
+    .boxescontainer{
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .box{
+            flex-grow: 1;
+            background-color: red;
+            width: 250px;
+            max-width: 400px;
+            aspect-ratio: 1;
+        }
+    }
+}
+.scale{
+    > div{
+        *{
+            filter: blur(0px);
+            backdrop-filter: 0;
+            
+        }
+        @for $child from 1 through 4 {
+         
+            &:nth-child(#{$child}){
+                animation: scale 5s ease-in-out ;
+               backface-visibility: hidden;
+               perspective: 1px;
+                
+                    @if ($child == 1){                                        animation-delay: 0s;
+                    }
+                    @if($child == 2){
+                        animation-delay: 5s;
+                    }
+                    @if($child == 3){
+                        animation-delay: 10s;
+                    }
+                    @if($child == 4){
+                        animation-delay: 15s;
+                    }
+                  
+                    }
+                
+                animation-fill-mode: both;
+                
+            }
+        
+            @keyframes scale {
+                0%{
+                    transform: scale(1);
+
+                }
+                25%{
+                    transform: scale(1.025);
+                }
+                75%{
+                    transform: scale(1.025);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            
+            }
+        
+        
+
+        
+    }
+}
+.upcoming-event{
+    h1{
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .divider{
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        // .yy{
+        //     scale: 1.05125;
+        // }
+        >div{
+          
+            box-shadow: 0px 1px 3px .5px rgba(0, 0, 0, 0.24);
+            padding:.25rem;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 1s ease-in-out;
+            >div{
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                border-radius: 20px;
+                text-transform: uppercase;
+                >div:not(.counter){
+                    display: flex;
+                    padding-left: 1rem;
+                    flex-grow: 1;
+                    align-items: center;
+                    gap: 1rem;
+
+                    a{
+                        display: block;
+                        height: 40px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        opacity: 0;
+                        transition: opacity .5s ease-in-out;
+                    }
+                    &:hover > a{
+                        opacity: 1;
+                    }
+                }
+                >span{
+                    width: 20px;
+                    aspect-ratio: 1;
+                }
+            }
+            &:hover{
+               transform: scale(1.025);
+               filter: blur(0px);
+
+            }
+           .counter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: .5;
+            aspect-ratio: 1;
+            padding: .5rem 1rem;
+            border-radius: 50%;
+           }
+            >span{
+                display: block;
+                width: 25px;
+                text-align: center;
+                aspect-ratio: 1;
+            }
+
+        }
+    }
+}
+.trans{
+    transform: translateY(-100%);
+    display: none;
+    overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+    .flexbox{
+        flex-direction: row;
+        gap: 1rem;
+        
+    }
+    .image-box{
+        order: unset;
+        img{
+            width: 85%;
+        }
+    }
+    .textbox{
+        order: unset;
+        padding: unset;
+    }
+    .else{
+        .boxescontainer{
+            .box{
+                width: 200px !important;
+                // max-width: 200px !important;
+                gap: unset;
+            }
+        }
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .upcoming-event{
+        .upcoming-event-image{
+            display: none;
+        }
+    }
+}

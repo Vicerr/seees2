@@ -1,0 +1,49 @@
+.download-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-file-container{
+    @extend .pt;
+    width: 150px;
+    flex-grow: 1;
+    display: block;
+    text-align: center;
+    box-shadow: 1px 1px 4px 2px rgba(236, 236, 236, 0.89);
+    transition: .2s ease-in-out;
+
+    &:nth-child(even){
+        background-color: rgb(198, 198, 255);
+        color: white;
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+    &:nth-child(odd){
+        color: black;
+        &:hover{
+            background-color: rgb(198, 198, 255);
+            color: white;
+           
+        }
+    }
+}
+
+.library-filter{
+    .mt{
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    select{
+        padding: .5rem 1rem;
+        border: 1pt solid grey;
+        outline: none;
+        appearance: none;
+
+        // &:focus, &:focus-visible, &:focus-within{
+        //     border: inherit;
+        // }
+    }
+}

@@ -1,0 +1,77 @@
+/* UTILITY CLASSES */
+
+.sr-only{
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.container{
+    max-width: 1000px;
+    width: 80%;
+    margin: auto;
+}
+.container-fluid{
+    width: 90%;
+    margin: auto;
+    max-width: 1366px;
+}
+
+@media screen and (max-width: 500px){
+    .container{
+        width: 90%;
+    }
+     
+}
+.text-center{
+    text-align: center;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+.align-items{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.justify-align-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+
+.pt{
+    padding: 1rem 0;
+}
+
+.p-around{
+    padding: 1rem;
+}
+.m-around{
+    margin: 1rem;
+}
+.mt{
+    margin: 1rem 0;
+}
+
+.fade-item{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s, transform 1s;
+    z-index: 1;
+    &.fade-and-slide-in{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    }
+}

@@ -1,0 +1,136 @@
+
+footer{
+    background-color: black;
+    z-index: 200 !important;
+    *{
+        color: rgb(83, 83, 83);
+    }
+}
+.footer-layout{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    *{
+        // color: $custom-black;
+        color: rgb(218, 218, 218);
+    }
+}
+.footer-layout-item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .title{
+        // font-size: 1.5rem;
+        padding: .5rem 0;
+
+      
+        font-weight: 600;
+    }
+    a{
+        padding: .25rem 0;
+        display: block;
+        
+    }
+}
+.footer-layout-item hr{
+    width: 12%;
+    animation: slide-line 1s ease-in-out  infinite;
+
+}
+@for $select-line-child from 1 through 5{
+    .footer-layout-item:nth-child(#{$select-line-child})  hr{
+        animation-duration: ((0.015s * $select-line-child) + 1.5);
+    width: 12%;
+    }}
+@keyframes slide-line {
+  0%{
+    width: 12%;
+  }
+  50%{
+    width: 13.5%;
+  }
+  100%{
+    width: 12%;
+  }
+}
+
+
+.footer__sponsors-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    a{
+        display: block;
+        width: 100px;
+        aspect-ratio: 16/9;
+    }
+}
+.footer-title{
+    color: white;
+    img{
+        width: 50px;
+        border-radius: 50%;
+        padding: .50rem;
+        background-color:rgb(255, 255, 255);
+    }
+}
+
+
+@media screen and (min-width: 500px) {
+    .footer-layout{
+        justify-content: flex-start;
+    }
+    .footer-layout-item{
+        flex: 1;
+        flex-basis: 150px;
+      
+    }
+}
+
+
+.low-footer{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 4rem;
+    width: 100%;
+    max-width: 500px;
+    font-size: .90rem;
+    p{
+        font-weight: bold;
+    }
+
+       li{
+        padding: 0 .25rem;
+        display: inline-block;
+       }
+    *{
+       color: rgb(83, 83, 83);;
+
+    }
+}
+
+.contact-links{
+    padding: .5rem 0;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    align-items: center;
+}
+.social-links-container, .sponsors-links-container{
+    display: flex;
+    gap: .5rem;
+}
+.social-link{
+    display: block;
+    // width: 35px;
+    font-size: 30px;
+    // aspect-ratio: 1;
+    // border-radius: 50%;
+    // background-color: white;
+}

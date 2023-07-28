@@ -1,0 +1,19 @@
+@import 'config/resets';
+@import 'config/utilityclasses';
+@import 'config/variables';
+@import 'homepage';
+@import 'navigation';
+@import 'about/president-section';
+@import 'about/discover';
+@import 'about/partnership';
+@import 'about/staff';
+@import 'privacypolicy';
+@import 'blog';
+@import 'download/download';
+@import 'responsive';
+@import 'cookies';
+@import 'footer';
+
+header{
+    position: relative;
+}

@@ -1,0 +1,241 @@
+.blog-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+}
+.card-details{
+    padding: .5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.time-posted{
+    font-size: .90rem;
+}
+
+.blog-card{
+    .container-fluid{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // background-color: red;
+    }
+    color: black;
+    flex: 0 1 auto;
+
+    display: block;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 300px;
+    background-color: rgb(151, 19, 19);
+    .image-container{
+        width: 100%;
+        aspect-ratio: 4/3;
+       
+    }
+    img{
+
+        display: none;
+    }
+    p{
+        color: rgb(139, 139, 139);
+    }
+    .banner{
+        background-color: red;
+        color: white;
+        padding: .25rem .5rem;
+        border-radius: 6px;
+        text-transform: capitalize;
+        font-size: .90rem;
+        font-weight: 500;
+        opacity: 0.85;
+        cursor: pointer;
+        transition: opacity .3s ease-in-out;
+        
+        &.red{
+            background-color: red;
+        }
+        &.yellow{
+            background-color: orange;
+        }
+        &.blue{
+            background-color: $darker-blue;
+        }
+        &.green{
+            background-color: rgb(0, 212, 0);
+        }
+        &.purple{
+            background-color: rgb(187, 0, 187);
+        }
+        &.green{
+            background-color: rgb(0, 212, 0);
+        }
+        &.cyan{
+            background-color: brown;
+        }
+
+       
+    }
+}
+.blog-header{
+    text-align: center;
+    padding: 1.5rem 0;
+
+    h1{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    p{
+        font-size: 1.125rem;
+        color: rgb(150, 150, 150);
+    }
+}
+@media screen and (min-width: 720px) {
+    .blog-page{
+        .image-container{
+            height: 80vh;
+        }
+    }
+}
+.blog-section.container-fluid{
+    width: 95%;
+}
+.buttons{
+    // padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    
+    .seeMore{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: block;
+        border: 0;
+        background-color: $darker-blue;
+        transition: background-color .5s ease-in-out;
+        overflow: hidden;
+        border-radius: 6px;
+        a{
+            font-weight: 700;
+            color: white;
+            display: block;
+        padding:.5rem 1rem;
+        background-color: transparent;
+            text-decoration: none;
+            :hover{
+                background-color: transparent;
+            }
+        }
+        :hover{
+            background-color: $lighter-blue;
+        }
+
+       
+    }
+    
+}
+
+.share-links{
+    display: flex;
+    gap: 0.75rem;
+
+    a{
+        display: block;
+        font-size: 1.25rem;
+    }
+    .fa-facebook{
+        color: #3b5998;
+    }
+    .fa-instagram{
+        color: #fd1d1d;
+    }.fa-twitter{
+       color: #00acee;
+    }
+   
+}
+.blog-buttons{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-inline: auto;
+    .share-buttons a{
+        display: block;
+        font-size: 1rem;
+    }
+}
+.register-button{
+    display: block;
+    padding: .25rem .75rem;
+    background-color: $darker-blue;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.share-buttons{
+
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    align-items: center;
+    .fa-facebook{
+        color: #3b5998;
+    }
+    .fa-instagram{
+        color: #fd1d1d;
+    }.fa-twitter{
+       color: #00acee;
+    }
+}
+.blog-page{
+    .image-container{
+       width: 100%;
+        aspect-ratio: 1 !important;
+    }
+    img{
+       display: none;
+    }
+    p{
+        padding: .5rem 0;
+    }
+    h2{
+        padding: 1rem 0;
+    }
+}
+
+.reply-section{
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        [type="submit"]{
+            width: 100px;
+            padding: .25rem 1rem;
+        }
+    } 
+}
+.formgroup{
+    input{
+        width: 100%;
+        padding: .5rem 1rem;
+        border-radius: 6px;
+        outline: 0;
+        border: 1pt solid rgba(128, 128, 128, 0.123);
+        transition: box-shadow .2s ease-in-out;
+        &:focus{
+            box-shadow: 0px 0px 1px 1px rgba(2, 135, 212, 0.644);
+        }
+    }
+    [name="reply"]{
+       height: 5rem;
+       padding: .25rem;
+    }
+    
+}
