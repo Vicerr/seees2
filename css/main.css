@@ -35,6 +35,11 @@ img {
   width: 100%;
 }
 
+.break {
+  display: block;
+  height: 10px !important;
+}
+
 /* UTILITY CLASSES */
 .sr-only {
   width: 1px;
@@ -72,16 +77,27 @@ img {
   text-transform: capitalize;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .align-items {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.justify-align-center {
+.justify-align-center, .event-list div:first-child, .event-list {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.justify-align-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .justify-center {
@@ -91,6 +107,10 @@ img {
 
 .pt, .download-file-container, .why-partnership-section .reason {
   padding: 1rem 0;
+}
+
+.px-small {
+  padding: 0 0.25rem;
 }
 
 .p-around {
@@ -107,13 +127,11 @@ img {
 
 .fade-item {
   opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 1s;
   z-index: 1;
 }
 .fade-item.fade-and-slide-in {
   opacity: 1 !important;
-  transform: translateY(0) !important;
 }
 
 header {
@@ -121,6 +139,7 @@ header {
   overflow: hidden;
 }
 
+/* HERO SECTION STYLING */
 .hero-section {
   max-height: 700px;
   height: 75vh;
@@ -144,15 +163,6 @@ header {
   font-weight: 900;
 }
 
-@media screen and (min-width: 500px) {
-  .hero-section {
-    height: 100vh;
-    position: relative;
-  }
-  .hero-text * {
-    font-size: 2rem;
-  }
-}
 .flexbox {
   display: flex;
   padding: 1rem 0;
@@ -189,10 +199,11 @@ header {
 
 .image-box {
   order: 2;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1;
 }
 .image-box img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .else .boxescontainer {
@@ -201,155 +212,114 @@ header {
 .else .boxescontainer .box {
   width: 100%;
   aspect-ratio: unset;
-  height: 100px;
+  height: 120px;
   position: relative;
+  background-color: #fff;
+  font-size: 0.9rem;
 }
-.else .boxescontainer .box::after {
-  content: "";
-  width: 60px;
+.else .boxescontainer .box .circle {
+  width: 55px;
   aspect-ratio: 1;
   border-radius: 50%;
   position: absolute;
   top: 0;
   left: 50%;
+  z-index: -1;
   transform: translate(-50%, -50%);
-  background-color: blue;
+  background-color: #fff;
 }
 
-.projects, .else {
+.projects,
+.else {
   padding: 1rem 0;
 }
-.projects h1, .else h1 {
+.projects h1,
+.else h1 {
   text-transform: capitalize;
 }
-.projects .boxescontainer, .else .boxescontainer {
+.projects .boxescontainer,
+.else .boxescontainer {
   margin: 1rem 0;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 1rem;
 }
-.projects .boxescontainer .box, .else .boxescontainer .box {
+.projects .boxescontainer .box,
+.else .boxescontainer .box {
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.0509803922);
   flex-grow: 1;
-  background-color: red;
   width: 250px;
-  max-width: 400px;
-  aspect-ratio: 1;
+  max-width: 300px;
 }
 
-.scale > div {
-  animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-.scale > div * {
-  filter: blur(0px);
-  -webkit-backdrop-filter: 0;
-          backdrop-filter: 0;
-}
-.scale > div:nth-child(1) {
-  animation: scale 5s ease-in-out;
-  backface-visibility: hidden;
-  perspective: 1px;
-  animation-delay: 0s;
-}
-.scale > div:nth-child(2) {
-  animation: scale 5s ease-in-out;
-  backface-visibility: hidden;
-  perspective: 1px;
-  animation-delay: 5s;
-}
-.scale > div:nth-child(3) {
-  animation: scale 5s ease-in-out;
-  backface-visibility: hidden;
-  perspective: 1px;
-  animation-delay: 10s;
-}
-.scale > div:nth-child(4) {
-  animation: scale 5s ease-in-out;
-  backface-visibility: hidden;
-  perspective: 1px;
-  animation-delay: 15s;
-}
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.025);
-  }
-  75% {
-    transform: scale(1.025);
-  }
-  100% {
-    transform: scale(1);
-  }
+.projects .box {
+  aspect-ratio: 1;
 }
 
 .upcoming-event h1 {
   text-align: center;
-  text-transform: capitalize;
+}
+.upcoming-event .textbox {
+  align-self: center;
+  width: 100%;
 }
 .upcoming-event .divider {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-}
-.upcoming-event .divider > div {
-  box-shadow: 0px 1px 3px 0.5px rgba(0, 0, 0, 0.24);
-  padding: 0.25rem;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 1s ease-in-out;
-}
-.upcoming-event .divider > div > div {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  border-radius: 20px;
-  text-transform: uppercase;
-}
-.upcoming-event .divider > div > div > div:not(.counter) {
-  display: flex;
-  padding-left: 1rem;
-  flex-grow: 1;
-  align-items: center;
   gap: 1rem;
 }
-.upcoming-event .divider > div > div > div:not(.counter) a {
-  display: block;
-  height: 40px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-.upcoming-event .divider > div > div > div:not(.counter):hover > a {
-  opacity: 1;
-}
-.upcoming-event .divider > div > div > span {
-  width: 20px;
-  aspect-ratio: 1;
-}
-.upcoming-event .divider > div:hover {
-  transform: scale(1.025);
-  filter: blur(0px);
-}
-.upcoming-event .divider > div .counter {
+
+.event-list {
+  padding: 0.25rem 0.5rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.5;
-  aspect-ratio: 1;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
+  color: black;
+  gap: 0.5rem;
+  border-bottom: 1px solid black;
 }
-.upcoming-event .divider > div > span {
-  display: block;
-  width: 25px;
-  text-align: center;
-  aspect-ratio: 1;
+.event-list div:first-child, .event-list div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+.event-list div:first-child {
+  padding: 0 0.5rem;
+  width: -moz-max-content;
+  width: max-content;
+  width: 80px;
+  font-size: 10px;
+  border-left: 4px solid blue;
+}
+.event-list div:first-child p:first-child {
+  font-weight: 900;
+  font-size: large;
+}
+.event-list div:nth-child(2) {
+  width: 100%;
+  justify-self: flex-start;
+}
+.event-list div:nth-child(2) p:first-child {
+  font-weight: 900;
+  font-size: large;
+}
+.event-list:hover .fa-arrow-right {
+  animation: bounce 0.5s ease-in-out infinite;
+}
+.event-list .fa-arrow-right {
+  font-size: 20px;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+.event-list .image-box {
+  display: none;
 }
 
 .trans {
@@ -358,16 +328,34 @@ header {
   overflow: hidden;
 }
 
+/*
+HOME PAGE MEDIA QUERIES
+*/
+@media screen and (min-width: 500px) {
+  .hero-section {
+    height: 100vh;
+    position: relative;
+  }
+  .hero-text * {
+    font-size: 2rem;
+  }
+}
 @media screen and (min-width: 768px) {
+  .upcoming-event > .event-list {
+    width: 70%;
+  }
   .flexbox {
     flex-direction: row;
     gap: 1rem;
   }
   .image-box {
     order: unset;
+    aspect-ratio: 4/3;
+    align-self: center;
   }
   .image-box img {
-    width: 85%;
+    border-radius: 10px;
+    width: 80%;
   }
   .textbox {
     order: unset;
@@ -951,7 +939,7 @@ header {
 .blog-card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
   justify-content: center;
 }
 
@@ -967,19 +955,63 @@ header {
   font-size: 0.9rem;
 }
 
+@media screen and (max-width: 480px) {
+  .blog-card {
+    font-size: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    gap: 1rem;
+    width: 100%;
+    max-width: unset !important;
+  }
+  .blog-card .container-fluid {
+    padding: 0.5rem;
+  }
+  .blog-card .card-details {
+    order: 2;
+  }
+  .blog-card .text {
+    order: 1;
+  }
+  .blog-card .text h3 {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .blog-card .buttons {
+    order: 3;
+  }
+  .blog-card .image-container {
+    order: 1;
+    width: 200px;
+    aspect-ratio: 1 !important;
+  }
+  .blog-card .banner {
+    font-size: 0.8rem !important;
+  }
+  .blog-card .buttons {
+    display: none;
+  }
+  .blog-card .card-details {
+    padding: 0;
+    justify-content: unset;
+    gap: 1rem;
+  }
+}
 .blog-card {
+  display: block;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.0901960784);
   color: black;
   flex: 0 1 auto;
   display: block;
   border-radius: 6px;
   overflow: hidden;
   max-width: 300px;
-  background-color: rgb(151, 19, 19);
 }
 .blog-card .container-fluid {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1rem;
 }
 .blog-card .image-container {
   width: 100%;
@@ -992,7 +1024,6 @@ header {
   color: rgb(139, 139, 139);
 }
 .blog-card .banner {
-  background-color: red;
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
@@ -1160,7 +1191,7 @@ header {
   padding: 0.25rem 1rem;
 }
 
-.formgroup input {
+.formgroup input, .formgroup textarea {
   width: 100%;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -1168,12 +1199,12 @@ header {
   border: 1pt solid rgba(128, 128, 128, 0.123);
   transition: box-shadow 0.2s ease-in-out;
 }
-.formgroup input:focus {
+.formgroup input:focus, .formgroup textarea:focus {
   box-shadow: 0px 0px 1px 1px rgba(2, 135, 212, 0.644);
 }
 .formgroup [name=reply] {
-  height: 5rem;
-  padding: 0.25rem;
+  height: 4rem;
+  padding: 0.5rem;
 }
 
 .download-section {
@@ -1228,25 +1259,44 @@ header {
   width: 100%;
   z-index: 300;
 }
-.cookies-popup > .container {
+.cookies-popup > .container-fluid {
   padding: 1rem 0.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.cookies-popup button {
-  padding: 0.5rem 1rem;
 }
 
-@keyframes slide-up {
-  from {
-    transform: translateY(100%);
+.cookie-button-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.cookie-button-container button {
+  padding: 0.5rem 1rem;
+  align-self: center;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 4px;
+}
+.cookie-button-container button#acceptCookiesButton {
+  background-color: rgb(13, 13, 243);
+  border: none;
+  color: white;
+}
+.cookie-button-container button#rejectCookiesButton {
+  border: 1pt solid rgb(61, 61, 253);
+  color: black;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .cookies-popup > .container-fluid {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: translateY(0);
+  .cookies-popup > .container-fluid h3 {
+    text-align: center;
   }
 }
 footer {
@@ -1338,10 +1388,13 @@ footer * {
 .footer-title {
   color: white;
 }
-.footer-title img {
+.footer-title .footer-image-container {
   width: 50px;
   border-radius: 50%;
   padding: 0.5rem;
+}
+.footer-title img {
+  width: 100%;
   background-color: rgb(255, 255, 255);
 }
 
