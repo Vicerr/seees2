@@ -10,6 +10,8 @@ imageOne.parentElement.style.background = "linear-gradient(rgba(0, 0, 0, 0.582),
 imageOne.parentElement.style.backgroundSize = "cover"
 imageOne.parentElement.style.backgroundRepeat = "no-repeat"
 }
+
+
 if(document.getElementById('presidents-image')){
 let presidentsImage = document.getElementById('presidents-image')
 
@@ -20,16 +22,20 @@ presidentsImage.parentElement.style.backgroundSize = "cover"
 presidentsImage.parentElement.style.backgroundRepeat = "no-repeat"
 
 }
-if(document.getElementById('presidents-image')){
-let presidentsImage = document.getElementById('presidents-image')
 
-let get_presidents_image = presidentsImage.getAttribute('src')
+if(document.querySelectorAll('.card__thumb__image')){
+let card__thumb__images = document.querySelectorAll('.card__thumb__image')
 
-presidentsImage.parentElement.style.background = "url('" + get_presidents_image + "') center center"
-presidentsImage.parentElement.style.backgroundSize = "cover"
-presidentsImage.parentElement.style.backgroundRepeat = "no-repeat"
+card__thumb__images.forEach(card__thumb__image =>{
+    let card__thumb__image__set = card__thumb__image.getAttribute('src')
 
+    card__thumb__image.parentElement.parentElement.style.background = "url('" + card__thumb__image__set + "') center center"
+    card__thumb__image.parentElement.parentElement.style.backgroundSize = "cover"
+    card__thumb__image.parentElement.parentElement.style.backgroundRepeat = "no-repeat"
+
+})
 }
+
 
 
 

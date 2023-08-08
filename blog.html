@@ -20,34 +20,69 @@
     <nav class="header-nav-section" role="navigation">
         <div class="container-fluid">
             <!-- brand name section  -->
-                <a class="brand__container" href="/">
-                    <img class="brand-image" src="assets/images/logo.png" alt="logo">
-                    <div>
-                        <p class="brand-name">SEEES</p>
-                        <p class="brand-motto">ELectricity for comfort</p>
-                    </div></a>
+            <a class="brand__container" href="/">
+                <img
+                    class="brand-image"
+                    src="assets/images/logo.png"
+                    alt="logo" />
+                <div>
+                    <p class="brand-name">SEEES</p>
+                    <p class="brand-motto">ELectricity for comfort</p>
+                </div>
+            </a>
             <!-- main link items for navigatioins -->
             <div class="brand-misc hide-dropdown">
                 <ul class="nav__items">
-                    <li><a class="link" href="/" referrerpolicy="no-referrer">Home</a></li>
-                    <li class="click"><a class="link"  referrerpolicy="no-referrer">About Us <i class="fas fa-caret-down"></i></a>
+                    <li>
+                        <a
+                            class="link"
+                            href="/"
+                            referrerpolicy="no-referrer"
+                            >Home</a
+                        >
+                    </li>
+                    <li class="click">
+                        <a
+                            class="link"
+                            href="about.html"
+                            referrerpolicy="no-referrer"
+                            >About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="link"
+                            href="blog.html"
+                            referrerpolicy="no-referrer"
+                            >Events / News</a
+                        >
+                    </li>
+                    <li class="click">
+                        <a class="link" referrerpolicy="no-referrer"
+                            >Resources <i class="fas fa-caret-down"></i
+                        ></a>
                         <ul class="dropdown-menu hide-dropdown">
-                            <li class="link-item"><a class="link" href="executives.html">Executives</a></li>
-                            <li class="link-item"><a class="link" href="partnership.html">Partners and Sponsors</a></li>
-                           
-                        </ul></li>
-                        <li><a class="link" href="blog.html" referrerpolicy="no-referrer">Events / News</a></li>
-                        <li class="click"><a class="link" referrerpolicy="no-referrer">Resources <i class="fas fa-caret-down"></i></a>
-                            <ul class="dropdown-menu hide-dropdown">
-                                <li class="link-item"><a class="link" href="">Student Materials</a></li>
-                                <li class="link-item"><a class="link" href="">Time Tables</a></li>
-                              
-                            </ul></li>
-                    <li><a class="link" href="#contact" referrerpolicy="no-referrer">Contact Us</a></li>
+                            <li class="link-item">
+                                <a class="link" href=""
+                                    >Student Materials</a
+                                >
+                            </li>
+                            <li class="link-item">
+                                <a class="link" href="">Time Tables</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a
+                            class="link"
+                            href="#contact"
+                            referrerpolicy="no-referrer"
+                            >Contact Us</a
+                        >
+                    </li>
                 </ul>
-             
             </div>
-           
+
             <!-- button to toggle navigation  -->
             <button class="nav__toggle">
                 <i class="bar fas fa-bars"></i>
@@ -55,181 +90,253 @@
         </div>
     </nav>
 
-<section class="blog-section pt container-fluid">
-  <div class="blog-header">
-    <h1>Events</h1>
-  
-  </div>
-    <div class="blog-card-container ">
     
+    <header class="justify-align-center pt pt">
+        <h1 class="capitalize">events</h1>
+    </header>
+<div  class="event-page container-fluid">
+    <article class="card">
+        <header  class="card__thumb">
+            <a href="blogone.html">
+                <img class="card__thumb__image" src="assets/images/hero.jpg">
+            </a>
 
-        <div href="blogone.html" class="blog-card fade-item" data-banner-type="sport">
-            <div class="image-container">
-                <img src="assets/images/3d93090265984ca78089c4e5c0d1d6a1.jpg" alt="">
-            </div>
-            <div class="container-fluid">
-                <div class="card-details">
-                    
-                    <span class="time-posted">12/06/2023</span>
-                </div>
-               <div class="text">
-                <h3>Fitness Frenzy</h3>
-                <p>SEEES hosting a sporting event to chill your chests and stay physically fit all roound</p>
-               
+        </header>
+        <div class="card__date">
+            <span class="card__date__day">24</span>
+            <span class="card__date__month">Jun</span>
+        </div>
+        <div class="card__body">
+            <div class="card__category"><a href="#">Category</a></div>
+            <div class="card__title capitalize"><a href="blogone.html">fitness frenzy</a></div>
+            <div class="card__subtitle">Donec posuere vulputate</div>
+            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente
+                doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere. Labore
+                sapiente doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem
+                facere.</p>
+        </div>
+        <footer class="card__footer">
+            <span class="icon icon--time">6 min</span>
+            <span class="icon icon--comment"><a href="#">2 comments</a></span>
+        </footer>
+    </article>
+    <article class="card">
+        <header class="card__thumb">
+            <a href="#">               
+                 <img class="card__thumb__image" src="assets/images/hero.jpg">
+            </a>
+
+        </header>
+        <div class="card__date">
+            <span class="card__date__day">20</span>
+            <span class="card__date__month">Aug</span>
+        </div>
+        <div class="card__body">
+            <div class="card__category"><a href="#">Category</a></div>
+            <div class="card__title capitalize"><a href="#">robotics and embedded systems</a></div>
+            <div class="card__subtitle">Donec posuere vulputate</div>
+            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente
+                doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere. Labore
+                sapiente doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem
+                facere.</p>
+        </div>
+        <footer class="card__footer">
+            <span class="icon icon--time">6 min</span>
+            <span class="icon icon--comment"><a href="#">2 comments</a></span>
+        </footer>
+    </article>
+    <article class="card">
+        <header class="card__thumb">
+            <a href="#">               
+                <img class="card__thumb__image" src="assets/images/hero.jpg">
+           </a>
+
+        </header>
+        <div class="card__date">
+            <span class="card__date__day">6</span>
+            <span class="card__date__month">Sep</span>
+        </div>
+        <div class="card__body">
+            <div class="card__category"><a href="#">Category</a></div>
+            <div class="card__title capitalize"><a href="#">tech - a - thon</a></div>
+            <div class="card__subtitle">Donec posuere vulputate</div>
+            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente
+                doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere. Labore
+                sapiente doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem
+                facere.</p>
+        </div>
+        <footer class="card__footer">
+            <span class="icon icon--time">6 min</span>
+            <span class="icon icon--comment"><a href="#">2 comments</a></span>
+        </footer>
+    </article>
+    <article class="card">
+        <header class="card__thumb">
+            <a href="#">               
+                <img class="card__thumb__image" src="assets/images/hero.jpg">
+           </a>
+
+        </header>
+        <div class="card__date">
+            <span class="card__date__day">23</span>
+            <span class="card__date__month">Mai</span>
+        </div>
+        <div class="card__body">
+            <div class="card__category"><a href="#">Category</a></div>
+            <div class="card__title"><a href="#">Vivamus elementum semper nisivi troscup</a></div>
+            <div class="card__subtitle">Donec posuere vulputate</div>
+            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente
+                doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere. Labore
+                sapiente doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem
+                facere.</p>
+        </div>
+        <footer class="card__footer">
+            <span class="icon icon--time">6 min</span>
+            <span class="icon icon--comment"><a href="#">2 comments</a></span>
+        </footer>
+    </article>
+    <article class="card">
+        <header class="card__thumb">
+            <a href="#">               
+                <img class="card__thumb__image" src="assets/images/hero.jpg">
+           </a>
+
+        </header>
+        <div class="card__date">
+            <span class="card__date__day">23</span>
+            <span class="card__date__month">Mai</span>
+        </div>
+        <div class="card__body">
+            <div class="card__category"><a href="#">Category</a></div>
+            <div class="card__title"><a href="#">Vivamus elementum semper nisivi troscup</a></div>
+            <div class="card__subtitle">Donec posuere vulputate</div>
+            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente
+                doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere. Labore
+                sapiente doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem
+                facere.</p>
+        </div>
+        <footer class="card__footer">
+            <span class="icon icon--time">6 min</span>
+            <span class="icon icon--comment"><a href="#">2 comments</a></span>
+        </footer>
+    </article>
+    <article class="card">
+        <header class="card__thumb">
+            <a href="#">               
+                <img class="card__thumb__image" src="assets/images/hero.jpg">
+           </a>
+
+        </header>
+        <div class="card__date">
+            <span class="card__date__day">23</span>
+            <span class="card__date__month">Mai</span>
+        </div>
+        <div class="card__body">
+            <div class="card__category"><a href="#">Category</a></div>
+            <div class="card__title"><a href="#">Vivamus elementum semper nisivi troscup</a></div>
+            <div class="card__subtitle">Donec posuere vulputate</div>
+            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente
+                doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere. Labore
+                sapiente doloremque recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem
+                facere.</p>
+        </div>
+        <footer class="card__footer">
+            <span class="icon icon--time">6 min</span>
+            <span class="icon icon--comment"><a href="#">2 comments</a></span>
+        </footer>
+    </article>
+</div>
+      <!-- FOOTER -->
+      <footer>
+        <div class="container-fluid pt">
+            <h1 class="footer-title align-items mt">
+               <div class="footer-image-container">
+                <img
+                src="assets/images/favicon-32x32.png"
+                alt="seees logo" />
                </div>
-                <div class="buttons">
-                   <button class="seeMore"> <a  href="blogone.html">See More</a></button>
-                    <div class="share-links">
-                        <a href="" ><i class="fab fa-facebook"></i></a>
-                        <a href="" ><i class="fab fa-twitter"></i></a>
-                        <a href="" ><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
+                SEEES UNIPORT
+            </h1>
+            <div class="footer-layout">
+                <ul class="mt footer-layout-item">
+                    <h2 class="title">
+                        About Us
+                        <hr />
+                    </h2>
+                    <li><a href="">Mission and Vision</a></li>
+                    <li><a href="">History</a></li>
+                    <li><a href="">Executive Community</a></li>
+                    <li><a href="">Constitution</a></li>
+                </ul>
+              
 
-        <div href="" class="blog-card fade-item" data-banner-type="sport">
-            <div class="image-container">
-                <img src="assets/images/3d93090265984ca78089c4e5c0d1d6a1.jpg" alt="">
+                <ul class="mt footer-layout-item">
+                    <h2 class="title">
+                        FAQs
+                        <hr />
+                    </h2>
+                    <li><a href="">Frequently Asked Questions</a></li>
+                    <li><a href="">Membership Queries</a></li>
+                    <li><a href="">Event Registeration Process</a></li>
+                    <li><a href="">General Inquries</a></li>
+                </ul>
+                <ul class="mt footer-layout-item">
+                    <h2 class="title">
+                        Contact Us
+                        <hr />
+                    </h2>
+                    <li>
+                        <a
+                            href="mailto:seees4uniport@gmail.com?subject=Message%20to%20SEEES"
+                            >Email: seeesuniport@gmail.com</a
+                        >
+                    </li>
+                    <li>
+                        <a href="tel:+2349079125326"
+                            >Call us at: +234 907 9125 326</a
+                        >
+                    </li>
+                    <li><a href="">Address</a></li>
+                    <li>
+                        <a href=""></a> <a href=""></a> <a href=""></a>
+                        <a href=""></a> <a href=""></a>
+                    </li>
+                </ul>
             </div>
-            <div class="container-fluid">
-                <div class="card-details">
-                    
-                    <span class="time-posted">12th May, 2023</span>
+            <ul class="footer__sponsors-section">
+                <h3 class="sponsors-header">Sponsors</h3>
+                <div class="sponsors-links-container">
+                    <a href=""
+                        ><img src="assets/images/boomplay.jpg" alt=""
+                    /></a>
+                    <a href=""
+                        ><img src="assets/images/ieee.png" alt=""
+                    /></a>
+                    <a href=""
+                        ><img src="assets/images/spotify.png" alt=""
+                    /></a>
                 </div>
-                <h3>Fitness Frenzy</h3>
-                <p>SEEES hosting a sporting event to chill your chests and stay physically fit all roound</p>
-                <div class="buttons pt">
-                   <button class="seeMore"> <a  href="blogone.html">See More</a></button>
-                    <div class="share-links">
-                        <a href="" ><i class="fab fa-facebook"></i></a>
-                        <a href="" ><i class="fab fa-twitter"></i></a>
-                        <a href="" ><i class="fab fa-instagram"></i></a>
-                    </div>
+            </ul>
+            <ul class="contact-links">
+                <h3 class="contact-link-header">Follow us on:</h3>
+                <div class="social-links-container">
+                    <a class="social-link fab fa-facebook" href=""></a>
+                    <a class="social-link fab fa-twitter" href=""></a>
+                    <a class="social-link fab fa-instagram" href=""></a>
+                    <a class="social-link fab fa-linkedin" href=""></a>
                 </div>
+            </ul>
+            <div class="low-footer pt">
+                <p>&COPY; COPYRIGHT 2023</p>
+                <ul>
+                    <li>
+                        <a href="privacypolicy.html">Terms of Use</a> |
+                        <a href="">Cookies</a>
+                    </li>
+                </ul>
             </div>
-           
         </div>
-        <div href="" class="blog-card fade-item" data-banner-type="sport">
-            <div class="image-container">
-                <img src="assets/images/3d93090265984ca78089c4e5c0d1d6a1.jpg" alt="">
-            </div>
-            <div class="container-fluid">
-                <div class="card-details">
-                    
-                    <span class="time-posted">12th May, 2023</span>
-                </div>
-                <h3>Fitness Frenzy</h3>
-                <p>SEEES hosting a sporting event to chill your chests and stay physically fit all roound</p>
-                <div class="buttons pt">
-                   <button class="seeMore"> <a  href="blogone.html">See More</a></button>
-                    <div class="share-links">
-                        <a href="" ><i class="fab fa-facebook"></i></a>
-                        <a href="" ><i class="fab fa-twitter"></i></a>
-                        <a href="" ><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-
-        <div href="" class="blog-card fade-item" data-banner-type="sport">
-            <div class="image-container">
-                <img src="assets/images/3d93090265984ca78089c4e5c0d1d6a1.jpg" alt="">
-            </div>
-            <div class="container-fluid">
-                <div class="card-details">
-                    
-                    <span class="time-posted">12th May, 2023</span>
-                </div>
-                <h3>Fitness Frenzy</h3>
-                <p>SEEES hosting a sporting event to chill your chests and stay physically fit all roound</p>
-                <div class="buttons pt">
-                   <button class="seeMore"> <a  href="blogone.html">See More</a></button>
-                    <div class="share-links">
-                        <a href="" ><i class="fab fa-facebook"></i></a>
-                        <a href="" ><i class="fab fa-twitter"></i></a>
-                        <a href="" ><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-      
-     
-    </div>
-</section>
-  <!-- FOOTER -->
-  <footer>
-    <div class="container-fluid pt">
-        <h1 class="footer-title align-items mt"><img src="assets/images/favicon-32x32.png" alt="seees logo"> SEEES UNIPORT</h1>
-        <div class="footer-layout">
-            <ul class="mt footer-layout-item">
-                <h2 class="title">About Us <hr></h2>
-                <li><a href="">Mission and Vision</a></li>
-                <li><a href="">History</a></li>
-                <li><a href="">Executive Community</a></li>
-                <li><a href="">Constitution</a></li>
-            </ul>
-            <ul class="mt footer-layout-item">
-                <h2 class="title">Activities <hr></h2>
-                <li><a href="">Workshop</a></li>
-                <li><a href="">Seminars</a></li>
-                <li><a href="">Social Events</a></li>
-                <li><a href="">Community Service</a></li>
-            </ul>
-          
-          
-            <ul class="mt footer-layout-item">
-                <h2 class="title">Resources <hr></h2>
-                <li><a href="">Study Materials</a></li>
-                <li><a href="">Research Materials</a></li>
-                <li><a href="">Useful Links</a></li>
-                <li><a href="">Past Questions</a></li>
-            </ul>
-          
-            <ul class="mt footer-layout-item">
-                <h2 class="title">FAQs <hr></h2>
-                <li><a href="">Frequently Asked Questions</a></li>
-                <li><a href="">Membership Queries</a></li>
-                <li><a href="">Event Registeration Process</a></li>
-                <li><a href="">General Inquries</a></li>
-            </ul>
-            <ul class="mt footer-layout-item">
-                <h2 class="title">Contact Us <hr></h2>
-                <li><a href="mailto:seees4uniport@gmail.com?subject=Message%20to%20SEEES">Email: seeesuniport@gmail.com</a></li>
-                <li><a href="tel:+2349079125326">Call us at: +234 907 9125 326</a></li>
-                <li><a href="">Address</a></li>
-                <li><a href=""></a> <a href=""></a> <a href=""></a> <a href=""></a> <a href=""></a></li>
-            </ul>
-           
-        </div>
-        <ul class="footer__sponsors-section">
-            <h3 class="sponsors-header">Sponsors</h3>
-           <div class="sponsors-links-container">
-                <a href=""><img src="assets/images/boomplay.jpg" alt=""></a>
-                <a href=""><img src="assets/images/ieee.png" alt=""></a>
-                <a href=""><img src="assets/images/spotify.png" alt=""></a>
-           </div>
-        </ul>
-        <ul class="contact-links">
-            <h3 class="contact-link-header">Follow us on:</h3>
-            <div class="social-links-container">
-                <a class="social-link fab fa-facebook" href=""></a>
-                <a class="social-link fab fa-twitter" href=""></a>
-                <a class="social-link fab fa-instagram" href=""></a>
-                <a class="social-link fab fa-linkedin" href=""></a>
-            </div>
-        </ul>
-        <div class="low-footer pt">
-            <p>&COPY; COPYRIGHT 2023</p>
-            <ul>
-                <li><a href="privacypolicy.html">Terms of Use</a> | <a href="">Cookies</a></li>
-            </ul>
-        </div>
-    </div>
-  </footer>
+    </footer>
     <script src="assets/vendors/jquery-3.7.0.min.js"></script>
     <script src="assets/vendors/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
